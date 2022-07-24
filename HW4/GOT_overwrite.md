@@ -5,7 +5,8 @@
 
 dynamically linked 방식(용량줄여줌)으로 컴파일된 파일들은, include한 라이브러리들을 외부에 위치시키고, 함수가 call될 때 내부적으로 plt(procedure linkage table)가 got(global offset table, 라이브러리의 실제 주소)를 참조하도록 해서 연결한다고 함. 
 
-함수 이름 뒤에 @plt가 붙은 친구들은 다 이 방법을 사용한다. 외부 라이브러리 특임. 
+
+함수 이름 뒤에 @plt가 붙은 친구들은 다 이 방법을 사용한다. 외부 라이브러리 특. 
 
 
 
