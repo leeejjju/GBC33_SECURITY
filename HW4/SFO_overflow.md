@@ -67,3 +67,6 @@ esp에 ebp를 넣어주고, ebp에는 stack에서 pop된, 그니까 그 아래�
 (buf 주소-8은 leave시점에서 p $esp-8 하면 바로 나옴!)
 
 
+
+
+**굿.**

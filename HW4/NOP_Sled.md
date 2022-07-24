@@ -18,3 +18,6 @@
 
 > `python -c "print '\x90'*100000 + [SHELLCODE]"`
 
+
+**굿.**
+
