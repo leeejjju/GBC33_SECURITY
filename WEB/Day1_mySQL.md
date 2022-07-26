@@ -1,3 +1,5 @@
+# mySQL, SQL injection
+
 >> mysql의 대부분 문법들은 case sensitive하지 않은 듯. 심지어 조건절로 필드 내 데이터를 대조할 때 조차...  근데 쿼리문은 다 대문자로 작성하는게 국룰이라고 한당. 
 
 ---
@@ -5,17 +7,17 @@
 
 
 ## 데이터베이스 조회
->	show databases;
+>	SHOW DATABASES;
 
 * 여기에 조회된 하나하나가 database.
-* Information schema -> 가장중요함 모든 정보가 있ㅇㅁ.해커가 탐냄. 
+* Information schema -> 가장중요함 모든 정보가 있음.해커가 탐냄. 
 
 
 ## 데이터베이스 만들기
 >	CREATE DATABASE [database name];
 
 * 거기로 이동
->	Use [database name];
+>	USE [database name];
 
 
 ## 테이블 만들기
@@ -32,17 +34,17 @@
 
 ## 테이블의 타입들?필드? 정보 보는 명령어
 
-> desc [tableName];
+> DESC [tableName];
 
 
-> desc USER;
+> DESC USER;
 
 ## 테이블 엎어버리기(지우기)
 
-> drop table [tableName];
+> DROP TABLE [tableName];
 
 
-> drop table USER;
+> DROP TABLE USER;
 
 ## 데이터 넣기
 
