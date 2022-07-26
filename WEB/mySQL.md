@@ -100,7 +100,7 @@ $_POST["keyword"] 이게 패킷으로 들어온?데이터?
 
 
 이거를 ID로 넣어버리면...? 앞에서 TRUE로 판정나버리고 뒤가 다 주석처리 되어버림. 
-> SELECT * FROM USER WHERE user_id='user3' OR 1=1;#  AND user_pw=$_POST["pw"];
+> SELECT * FROM USER WHERE user_id='user3' OR 1=1; *#  AND user_pw=$_POST["pw"];*
 
 그니까 pw입력 없이 id만으로 로그인이 가능해져버림. ㄴㅇㄱ 
 
@@ -108,7 +108,7 @@ $_POST["keyword"] 이게 패킷으로 들어온?데이터?
 
 `' OR 1=1';#`
 
-> SELECT * FROM USER WHERE user_id='user3' AND user_pw='' OR 1=1';#';
+> SELECT * FROM USER WHERE user_id='user3' AND user_pw='' OR 1=1'; *#';*
 
 이르케 쿼리문을 조작하는 방식이 **SQL injection** 이라구 한다.
 
