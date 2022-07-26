@@ -103,9 +103,9 @@ $_POST["keyword"] 이게 패킷으로 들어온?데이터?
 
 아니면 pw에다가 
 
-`' OR 1=1';#`
+`' OR 1=1;#`
 
-> SELECT * FROM USER WHERE user_id='user3' AND user_pw='' OR 1=1'; *#';*
+> SELECT * FROM USER WHERE user_id='user3' AND user_pw='' OR 1=1; *#';*
 
 
 이래 넣으면? 역시 TRUE로 판정되어 로그인에 성공하게 된다. 
