@@ -2,13 +2,14 @@
 ## 데이터베이스 조회
 >	show databases;
 
-하나하나가 database.
->	Information schema -> 가장중요함 모든 정보가 있ㅇㅁ.해커가 탐냄. 
+* 여기에 조회된 하나하나가 database.
+* Information schema -> 가장중요함 모든 정보가 있ㅇㅁ.해커가 탐냄. 
+
 
 ## 데이터베이스 만들기
 >	CREATE DATABASE [database name];
 
-
+* 거기로 이동
 >	Use [database name];
 
 
@@ -17,21 +18,23 @@
 * PRIMARY KEY -> not null이면서 unique한 속성을 가짐. 테이블 안에서 오직 한 개만 존재. 
 * 실제로는 pw를 암호화해서 hash값으로 저장함
 
-## 테이블의 타입들?보는 명령어
+## 테이블의 타입들?필드? 정보 보는 명령어
+
 >	desc USER;
 
 ## 테이블 엎어버리기(지우기)
+
 >	drop table [table name];
 
 ## 데이터 넣기
 
-> INSERT INTO USER VALUES (NULL, 'JJ', 'w12', 21);
+> INSERT INTO USER VALUES (NULL, 'JJ', 'jj', 21);
 
 ## 데이터 조회
 
 
 
-> SELECT [filed name] FROM [table name];
+> SELECT [filed name] FROM [table name] WHERE [fieldName]=[value];
 
 * 전체 조회
 > SELECT * FROM USER;
