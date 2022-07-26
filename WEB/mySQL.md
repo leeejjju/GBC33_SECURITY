@@ -49,9 +49,6 @@
 > INSERT INTO USER VALUES (NULL, 'JJ', 'jj', 21);
 
 * value들은 field가 선언된 순서대로 넣는게 국룰. 다른 순서로 넣고싶다면 앞에 필드들을 원하는 순서대로 정렬한거를 하나 추가하면 된다는데...
-
-> INSERT INTO USER VALUES (id, age, user_id, user_pw) (NULL, 21, 'JJ', 'jj');
-
 * 굳이...? 
 
 
@@ -110,7 +107,11 @@ $_POST["keyword"] 이게 패킷으로 들어온?데이터?
 
 > SELECT * FROM USER WHERE user_id='user3' AND user_pw='' OR 1=1'; *#';*
 
-이르케 쿼리문을 조작하는 방식이 **SQL injection** 이라구 한다.
+
+이래 넣으면? 역시 TRUE로 판정되어 로그인에 성공하게 된다. 
+
+
+이르케 쿼리문을 조작하는 방식을 **SQL injection** 이라구 한다.
 
 #
 #
