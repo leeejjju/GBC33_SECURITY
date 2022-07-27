@@ -69,6 +69,10 @@
 
 > ID에 `1' union select user_id, password from users;#`을 넣고 submit 
 
+
+![SQL_mid](https://github.com/leeejjju/GBC33_SECURITY/blob/main/img/sql_mid.jpg)
+
+
 <br></br>
 
 ---
@@ -79,6 +83,8 @@
 * 걍 `1' OR 1=1;#` 넣으니까 되는데...? 
 * LIMIT가 붙어있는게 나름 보안이었다는디 주석처리해주면 될 일임.
 
+
+![SQL_high](https://github.com/leeejjju/GBC33_SECURITY/blob/main/img/sql_high.jpg)
 
 <br></br>
 
@@ -121,10 +127,18 @@
 ### low
 
 > message에 <script> alert(document.cookie);</script>를 넣고 게시글 등록
+
+![XSSS_low1](https://github.com/leeejjju/GBC33_SECURITY/blob/main/img/XSSS_low1.jpg)
+
+
 * 클릭한 사람의 세션정보다 팝업으로 뜨게 만드는 구문이라고 한다. 이후 누군가 게시글을 클릭하면 해당 메세지를 로드하는 과정에서 스크립트가 실행됨. 
 * `alert()`: popup을 띄우는 어쩌구.
 
 > `security=low; PHPSESSID=5qr77mi4r5qqsnv87hp4402fu9`
+
+
+![XSSS_low2](https://github.com/leeejjju/GBC33_SECURITY/blob/main/img/XSSS_low2.jpg)
+
 
 * 팝업이 떴다 우와! 
 
@@ -158,6 +172,9 @@
 > BurpShite의 proxy에서 name을 `<scr<script> alert(document.cookie);</script>ipt> alert(document.cookie);</script>`로 바꿔준다.
 
 
+![XSSS_mid](https://github.com/leeejjju/GBC33_SECURITY/blob/main/img/XSSS_mid.jpg)
+
+
 <br></br>
 
 ---
@@ -167,9 +184,21 @@
 
 * 일단 개발자도구에서 글자수 제한을 풀어준다. 10 -> 50
 
+
+![XSSS_high1](https://github.com/leeejjju/GBC33_SECURITY/blob/main/img/XSSS_high1.jpg)
+
+
+
 > 제목에 <body onload="alert(document.cookie)"> 일케 해주자
 
+
+![XSSS_high2](https://github.com/leeejjju/GBC33_SECURITY/blob/main/img/XSSS_high2.jpg)
 * onload: 사이트에 접속시마다 매번 실행되도록 하는 것. body태그에다가 씀. 
+
+
+쨘.
+![XSSS_high3](https://github.com/leeejjju/GBC33_SECURITY/blob/main/img/XSSS_high3.jpg)
+
 
 <br></br>
 
