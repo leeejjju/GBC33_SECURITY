@@ -65,7 +65,7 @@ INSERT INTO dorm VALUES('vision', 205, 308, 1020);
 
 > SELECT * FROM users ORDER BY id DESC;
 
-* 내림차순
+* 오름차순
 
 > SELECT * FROM users ORDER BY id ASC;
 
@@ -103,7 +103,7 @@ o로 끝나는거는 %o, o로 시작하는거는 o%로 조회 가능.
 * 앞에서부터 세개만 보여주기
 > SELECT * FROM users LIMIT 3;
 
-* 다른거랑 혼용시 LIMIT은 제일 끝에 써주자
+* 다른거랑 혼용시 **LIMIT은 제일 끝에 써주자**
 > SELECT * FROM users ORDER BY DESC LIMIT 3; dhfsdfasdfasdfasdf오류뜸 왜지?
 
 
@@ -112,17 +112,31 @@ o로 끝나는거는 %o, o로 시작하는거는 o%로 조회 가능.
 * 제일 큰 값 가져옴
 > SELECT max(id) FROM users;
 
+* 제일 작은 값 가져옴
+> SELECT min(id) FROM users;
+
 ### COUNT
 
-> SELECT COUNT(*) FROM users;
+* 필드에 있는 데이터의 갯수(row갯수). null은 제외된대. 
 > SELECT COUNT([필드명]) FROM users;
 
-필드에 있는 데이터의 갯수(row갯수). null은 제외된대. 
+> SELECT COUNT(*) FROM users;
+
+
 
 ### DELETE
 
-DELETE FROM users; #users테이블에 있는 모든 데이터 삭제
-DELETE FROM users WHERE user_id='user2'; #user2의 데이터 삭제
+
+* users테이블에 있는 모든 데이터 삭제
+
+> DELETE FROM users; 
+
+
+* user2의 데이터 삭제
+
+DELETE FROM users WHERE user_id='user2'; 
+
+
 
 ### UPDATE
 
