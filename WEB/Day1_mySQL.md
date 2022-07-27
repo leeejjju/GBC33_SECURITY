@@ -126,7 +126,7 @@ $_POST["keyword"] 이게 패킷으로 들어온?데이터?
 > php -S localhost:8080 index.php
 
 
-그리고 웹 브라우저에서 `locathost:8080` 치면 거기에 머시기 그거 뜸. 
+그리고 웹 브라우저에서 `localhost:8080` 치면 거기에 머시기 그거 뜸. 
 
 
 
