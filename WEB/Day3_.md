@@ -175,6 +175,13 @@
 ![XSSS_mid](https://github.com/leeejjju/GBC33_SECURITY/blob/main/img/XSSS_mid.jpg)
 
 
+![XSSS_mid2](https://github.com/leeejjju/GBC33_SECURITY/blob/main/img/XSSS_mid2.jpg)
+
+
+
+굿.
+
+
 <br></br>
 
 ---
@@ -193,7 +200,7 @@
 
 
 ![XSSS_high2](https://github.com/leeejjju/GBC33_SECURITY/blob/main/img/XSSS_high2.jpg)
-* onload: 사이트에 접속시마다 매번 실행되도록 하는 것. body태그에다가 씀. 
+* `onload`: 사이트에 접속시마다 매번 실행되도록 하는 것. body태그에다가 씀. 
 
 
 쨘.
@@ -208,17 +215,18 @@
 
 * name에 적용된 것. 
 
-> stripslashes()
+> `stripslashes()`
 : 슬래쉬( \ ) 없애기. 
 
 
-> mysqli_real_escape_string()
+> `mysqli_real_escape_string()`
 : 특수기호를 Escape string(\n, \r...) 형태로 바꿔줌.
 
 
-> htmlspecialchars()
+> `htmlspecialchars()`
 : 툭수기호를 html entity(&lt, &amp) 형태로 바꿔줌. 
 
 
-
+<br></br>
+<br></br>
 **굿**
