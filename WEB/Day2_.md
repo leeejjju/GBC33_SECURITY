@@ -8,6 +8,8 @@
 
 # mysql 조금 더
 
+
+
 > CREATE DATABASE gbc;
 
 
@@ -28,7 +30,7 @@
     num_of_rooms INT NOT NULL,
     num_of_students INT NOT NULL);
 
-* 잔뜩 삽입
+* 데이터 왕창 추가 
 
 > INSERT INTO users VALUES(NULL, 'user1', 'user1', 23, 'rodem');
 
