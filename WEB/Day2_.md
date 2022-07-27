@@ -134,7 +134,7 @@ o로 끝나는거는 %o, o로 시작하는거는 o%로 조회 가능.
 
 * user2의 데이터 삭제
 
-DELETE FROM users WHERE user_id='user2'; 
+> DELETE FROM users WHERE user_id='user2'; 
 
 
 
