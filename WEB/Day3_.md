@@ -27,7 +27,7 @@
 <br></br>
 
 
-## SQL injection
+# SQL injection
 
 ---
 
@@ -111,7 +111,7 @@
 
 ---
 
-## XSS (Stored), Stored Cross Site Scripting
+# XSS (Stored), Stored Cross Site Scripting
 
 
 * 게시판에서 악용이 될 수 있다.
@@ -126,7 +126,7 @@
 
 ### low
 
-> message에 <script> alert(document.cookie);</script>를 넣고 게시글 등록
+> message에 `<script> alert(document.cookie);</script>`를 넣고 게시글 등록
 
 ![XSSS_low1](https://github.com/leeejjju/GBC33_SECURITY/blob/main/img/XSSS_low1.jpg)
 
@@ -196,7 +196,7 @@
 
 
 
-> 제목에 <body onload="alert(document.cookie)"> 일케 해주자
+> 제목에 `<body onload="alert(document.cookie)">` 일케 써서 게시글 등록.
 
 
 ![XSSS_high2](https://github.com/leeejjju/GBC33_SECURITY/blob/main/img/XSSS_high2.jpg)
