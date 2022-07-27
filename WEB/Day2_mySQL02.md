@@ -1,10 +1,3 @@
-# DVWA 모의해킹 사이트?
-
-[DVWA_window](https://m.blog.naver.com/PostView.nhn?blogId=sjhmc9695&logNo=221303220819&proxyReferer=https:%2F%2Fwww.google.com%2F)
-
-[DVWA_Mac_Linux](http://coashanee5.blogspot.com/2018/07/kali-linux-dvwa-with-xampp.html)
-
----
 
 # mysql 조금 더
 
