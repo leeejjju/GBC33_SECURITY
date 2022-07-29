@@ -9,14 +9,14 @@
 
 
 
-ip를 치면 ping을 때린 결과가 낭노다?
+ip를 치면 ping을 때린 결과가 나오는 뭐시깽이가 있다고 한다. 
 
-유저의 입력이 ping 커멘드 뒤에 들어가게 되는데... 
-그니까 서버에서 리눅스 명령이 먹는건데
 
-그 환경에서 다른 원하는 명령을 실행시킬 수 있도록 하는것. 
+내부적인 동작 원리는 유저의 입력이 ping 커멘드 뒤에 들어가게 되는건데... 
+그니까 서버에서 리눅스 명령이 먹는건데, 
 
-우회를 한다던가..? 
+그 환경에서 다른 원하는 명령을 실행시킬 수 있도록 하는것이 command injection.  
+
 
 
 <br></br>
@@ -25,7 +25,10 @@ ip를 치면 ping을 때린 결과가 낭노다?
 ## low
 
 
-리눅스 명령에 앞에 명령을 실행하고 뒤에명령을 또 실행하는 명령어가 있다는데... `&&`로도 할 수 있고, `;`으로도 할 수 있고. 
+리눅스 명령에 앞에 명령을 실행하고 뒤에명령을 또 실행하는 명령어!
+
+ `&&`로도 할 수 있고, `;`으로도 할 수 있고. 예를 들어... 
+
 
 > whoami; pwd
 
@@ -33,16 +36,42 @@ ip를 치면 ping을 때린 결과가 낭노다?
 > whoami && pwd (둘 다 true일 때 뜬다...? 뒤가 틀리면 앞만 실행되고 앞이 틀리면 아예 실행 안되고 )
 
 
+
+그래서 어떻게 해보느냐! 
+
+
 > 입력란에 `127.0.0.1; ls` 입력
+
+![CI_low](https://github.com/leeejjju/GBC33_SECURITY/blob/main/img/CI_low.jpg)
+
+window환경이라 글자는 깨졌지만 제대로 ls명령의 결과가 출ㄺ된 것을 알 수 있다. 
+
+
 
 <br></br>
 ---
 
+
 ## medium
 
+![CI_mid0](https://github.com/leeejjju/GBC33_SECURITY/blob/main/img/CI_mid0.jpg)
+`&&`와 `;`을 replace()을 이용해 막아둔 것을 확인할 수 있다. 사라지게 됨. 
+
+
+
+이럴 때 꼼수. 이 친구들은 먹힐 것이다. 
+
+
 > 127.0.0.1 &;& ls
+
+
 > 127.0.0.1 || ls
 
+
+![CI_mid](https://github.com/leeejjju/GBC33_SECURITY/blob/main/img/CI_mid.jpg)
+
+
+굿.
 
 <br></br>
 ---
@@ -50,10 +79,20 @@ ip를 치면 ping을 때린 결과가 낭노다?
 ## high
 
 
+
+![CI_high0](https://github.com/leeejjju/GBC33_SECURITY/blob/main/img/CI_high0.jpg)
+블랙리스트가 더 치밀해졌다. 그러나?
+
+
 replace 대상이 `'|'`가 아닌 `'| '`이었던 것이 구멍. 이걸 공략한다 
 
 
 > 입력란에 `127.0.0.1 |&|& dir` 입력. 
+
+![CI_high](https://github.com/leeejjju/GBC33_SECURITY/blob/main/img/CI_high.jpg)
+
+
+굿. 
 
 
 <br></br>
@@ -62,9 +101,16 @@ replace 대상이 `'|'`가 아닌 `'| '`이었던 것이 구멍. 이걸 공략�
 ## impossible
 
 
-앞에 구멍이 지워지면 된다. 
+그렇다면 command injection의 이상적인 보안 형태는 어떨까.
+
+
+그냥 medium에서 구멍이 지워지면 된다. 
+
 
 그리고 `explode()`, `is_numeric()`을 사용해서 유효한 IP입력값인지 확인 과정을 거쳐줌.
+
+
+굿.
 
 
 

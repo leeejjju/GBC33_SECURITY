@@ -94,14 +94,15 @@ sleep?이라는걸 쓸수도 있대. delay를 살짝 주는 것.
 
 * -D [DB명, ex) dvwa] --tables 하면 테이블명 알아내기. 
 
-* -T [table명, ex) users] -dump 하면 뭐냐 해당 테이블의 덤프를 딴다고? 
+* -T [table명, ex) users] -dump 하면 뭐냐 해당 테이블의 덤프를 딴다.
 
--- 덤프란? 데이터를 압축해서 새로운 뭔가를 만드는... 전체 조회? 느낌으로도 사용되는듯
+-> 덤프란? 데이터를 압축해서 새로운 뭔가를 만드는... 전체 조회? 느낌으로도 사용되는듯
 
 
 ![SI_low3](https://github.com/leeejjju/GBC33_SECURITY/blob/main/img/SI_low3.jpg)
 
 
+굿.
 
 <br></br>
 ---
