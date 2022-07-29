@@ -1,7 +1,12 @@
 # DVWA 02
 
 
-> `http://localhost/dvwa/vulnerabilities/exec/`
+
+
+> `http://localhost/dvwa/security.php`
+
+
+> `http://localhost/phpmyadmin/`
 
 
 
@@ -9,7 +14,7 @@
 
 
 
-ip를 치면 ping을 때린 결과가 나오는 뭐시깽이가 있다고 한다. 
+ip를 치면 ping을 때린 결과가 나오는 뭐시깽이가 있다고 하자. 
 
 
 내부적인 동작 원리는 유저의 입력이 ping 커멘드 뒤에 들어가게 되는건데... 
@@ -40,11 +45,11 @@ ip를 치면 ping을 때린 결과가 나오는 뭐시깽이가 있다고 한다
 그래서 어떻게 해보느냐! 
 
 
-> 입력란에 `127.0.0.1; ls` 입력
+> 입력란에 `127.0.0.1 && dir` 입력
 
 ![CI_low](https://github.com/leeejjju/GBC33_SECURITY/blob/main/img/CI_low.jpg)
 
-window환경이라 글자는 깨졌지만 제대로 ls명령의 결과가 출ㄺ된 것을 알 수 있다. 
+window환경이라 글자는 깨졌지만 제대로 dir명령의 결과가 출력된 것을 알 수 있다. 
 
 
 
@@ -55,14 +60,17 @@ window환경이라 글자는 깨졌지만 제대로 ls명령의 결과가 출ㄺ
 ## medium
 
 ![CI_mid0](https://github.com/leeejjju/GBC33_SECURITY/blob/main/img/CI_mid0.jpg)
-`&&`와 `;`을 replace()을 이용해 막아둔 것을 확인할 수 있다. 사라지게 됨. 
+
+
+* `&&`와 `;`을 replace()을 이용해 막아둔 것을 확인할 수 있다. 사라지게 됨. 
 
 
 
 이럴 때 꼼수. 이 친구들은 먹힐 것이다. 
 
 
-> 127.0.0.1 &;& ls
+> 127.0.0.1 &;&; dir
+* `;`가 대체되어 사라지면 온전한 `&&`가 남는다. 
 
 
 > 127.0.0.1 || ls
@@ -81,6 +89,8 @@ window환경이라 글자는 깨졌지만 제대로 ls명령의 결과가 출ㄺ
 
 
 ![CI_high0](https://github.com/leeejjju/GBC33_SECURITY/blob/main/img/CI_high0.jpg)
+
+
 블랙리스트가 더 치밀해졌다. 그러나?
 
 
