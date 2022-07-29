@@ -41,6 +41,7 @@ sleep?이라는걸 쓸수도 있대. delay를 살짝 주는 것.
 
 
 
+검색창에 다음과 같이 입력. 
 
 
 > `1' AND ascii(substr((select first_name from users where user_id='1'), 1, 1))>91#`
@@ -53,13 +54,13 @@ sleep?이라는걸 쓸수도 있대. delay를 살짝 주는 것.
 
 하나씩 늘려가며 대입해봤을 때 **가장 먼저 false가 뜨는 그 값**이 아이디의 첫 글자라고 유추할 수 있겠다. 
 
-* substr((select first_name from users where user_id='1'), **n**, 1)) 이면 n번째 글자를 의미함. 
+* substr((select first_name from users where user_id='1'), **n**, 1)) 이면 n번째 글자를 의미함. 이걸 이용해서 모든 글자를 알아내 조합하면 되는 것인디...
 
 
 사람이 다 하기엔 너무 노가다라서... 이걸 자동화해서 터는... 그런 툴이 있다. SQL MAP이라는건데
 
 
-[SQL_MAP_download](https://sqlmap.org/)
+[[SQL_MAP_download]](https://sqlmap.org/)
 
 
 확인 가능한 폴더에서 압축 풀어주고,
@@ -71,13 +72,10 @@ sleep?이라는걸 쓸수도 있대. delay를 살짝 주는 것.
 > `console.log(document.cookie);`
 
 
-그리고 뜨는 이거를 카피해서
+그리고 뜨는 이거(`security=low; PHPSESSID=7cjf6r14an9h4b5lmqsabcqhvr`
+)를 카피해서
 
 ![SI_low1](https://github.com/leeejjju/GBC33_SECURITY/blob/main/img/SI_low1.jpg)
-
-
-
-`security=low; PHPSESSID=7cjf6r14an9h4b5lmqsabcqhvr`
 
 
 
